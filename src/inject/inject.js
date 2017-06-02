@@ -8,6 +8,8 @@ chrome.extension.sendMessage({}, function(response) {
 		console.log("Hello. This message was sent from scripts/inject.js");
 		// ----------------------------------------------------------
 
+		debugger;
+
 	}
 	}, 10);
 });

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "homepage_url": "https://github.com/Traderspy/video-chrome-extension",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -20,16 +20,18 @@
     "default_popup": "src/page_action/page_action.html"
   },
   "permissions": [
-    "http://miembros.elclubdeinversionistas.com/*"
+    "http://miembros.elclubdeinversionistas.com/*",
+    "https://player.vimeo.com/video/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://miembros.elclubdeinversionistas.com/*"
       ],
       "js": [
         "src/inject/inject.js"
-      ]
+      ],
+      "all_frames": true
     }
   ]
 }
